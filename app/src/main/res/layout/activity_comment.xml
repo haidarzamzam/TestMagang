@@ -27,8 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="Comment : "
-        android:textColor="@android:color/white" />
+        android:text="Comment : " />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview_comment"
         android:layout_width="match_parent"
