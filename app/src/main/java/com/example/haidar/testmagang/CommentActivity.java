@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -34,11 +35,18 @@ public class CommentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comment);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView = findViewById(R.id.recyclerview_comment);
         recyclerView.setAdapter(adapter);
         pModel = (PostModel) getIntent().getSerializableExtra(PostActivity.ITEM);
+        setTitle("Comment");
         getDataPost();
+
+        TextView tvTitle = findViewById(R.id.textViewDetailName);
+        tvTitle.setText(pModel.getTitle());
+        TextView tvBody = findViewById(R.id.textViewDetailPost);
+        tvBody.setText(pModel.getBody());
 
         //url = "http://jsonplaceholder.typicode.com/posts/" + pModel.getId() + "/comments";
         Log.d("comment", "onCreate: " + url);
@@ -85,6 +93,9 @@ public class CommentActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        return super.onOptionsItemSelected(item);
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return true;
     }
 }
