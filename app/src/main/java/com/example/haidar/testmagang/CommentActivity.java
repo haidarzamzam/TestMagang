@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,12 +43,10 @@ public class CommentActivity extends AppCompatActivity {
         getDataPost();
 
         TextView tvTitle = findViewById(R.id.textViewDetailName);
-        tvTitle.setText(pModel.getTitle());
+        tvTitle.setText("Title : " + pModel.getTitle());
         TextView tvBody = findViewById(R.id.textViewDetailPost);
-        tvBody.setText(pModel.getBody());
+        tvBody.setText("Body  : " + pModel.getBody());
 
-        //url = "http://jsonplaceholder.typicode.com/posts/" + pModel.getId() + "/comments";
-        Log.d("comment", "onCreate: " + url);
     }
 
     public void getDataPost() {

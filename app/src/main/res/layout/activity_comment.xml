@@ -22,11 +22,18 @@
         android:layout_height="match_parent"
         android:text="Title" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Comment : "
+        android:textColor="@android:color/white" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview_comment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="35dp"
         android:clipToPadding="false"
         android:scrollbars="vertical"
         tools:context=".PostActivity" />

@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="#3498db    "
         app:cardCornerRadius="5dp">
 
         <RelativeLayout
@@ -24,7 +25,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginRight="15dp"
-                android:background="@color/colorPrimaryDark"
+                android:background="#2980b9"
                 android:gravity="center"
                 android:text="1"
                 android:textAlignment="center"
@@ -42,6 +43,7 @@
                 android:maxLength="23"
                 android:paddingRight="16dp"
                 android:text="Title"
+                android:textColor="@android:color/white"
                 android:textStyle="bold" />
 
             <TextView
@@ -52,8 +54,10 @@
                 android:layout_toEndOf="@+id/textViewIde"
                 android:gravity="left"
                 android:maxLength="100"
+                android:paddingBottom="10dp"
                 android:paddingRight="16dp"
-                android:text="Body" />
+                android:text="Body"
+                android:textColor="@android:color/white" />
 
         </RelativeLayout>
 
